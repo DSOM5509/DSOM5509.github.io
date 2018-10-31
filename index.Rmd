@@ -58,59 +58,43 @@ If you are willing to be a little uncomfortable, if you are willing to accept th
 
 #### Class Format
 
-This is not a traditional lecture-based course. I use a modified version of the ‘flipped classroom’ format, which means that you will read blog posts, academic papers, watch a video before each period, and complete an assessment exercise. During class we will focus on solving a problem or problems using exercises, team activities, additional assessments, and an open discussion. Success in this course is a function of your engagement. I cannot stress this point enough--you must engage with the material and with your peers. Data science is a contact sport---you must come to each and every class prepared and ready to contribute!
+This is not a traditional lecture-based course. I use a modified version of the ‘flipped classroom’ format, which means that you will read blog posts, academic papers, watch videos, and complete an assessment exercise. During our in-class sessions we will focus on solving a problem or problems using live cases, exercises, team activities, additional assessments, and an open discussion. Success in this course is a function of your engagement. I cannot stress this point enough--you must engage with the material and with your peers. Data science is a contact sport---you must come to each and every session prepared and ready to contribute!
 
 <br>
 
 ***
 ### Course Materials
 
-In addition to the books, blogs, and other resources listed below, you can find all of the readings available through the [UMKC Library](https://library.umkc.edu/mnl), [Google Scholar](https://scholar.google.com/) (for off-campus access, I encourage you to use the [UMKC VPN service](http://www.umkc.edu/is/support/services/VPN/)), or direct link in this document.  Please remember to bring a laptop to each session.  You will also need to have [R version 3.4.3 or higher](https://cran.r-project.org/) and [RStudio 1.1.383 or higher](https://www.rstudio.com/products/rstudio/download/#download) installed on your laptop.
+You can find links to all required videos and readings below. I've noted the readings that require you to be on campus, logged in to the [UMKC VPN](http://www.umkc.edu/is/support/services/VPN/), or by logging on to the [UMKC Library](https://library.umkc.edu/mnl). 
 
-We will use the [RDTT IV Spring 2018](https://rdttivspring2018.slack.com/) Slack workspace as our primary course management system, along with our [RDTT IV Organization](https://github.com/RDTT-IV) on GitHub.
+We will be using [R](https://cran.r-project.org) and [R Studio](https://www.rstudio.com) in this course. There is no software for you to install fortunately, because we are using a new platform called [R Studio Cloud](https://rstudio.cloud/). R Studio Cloud is a alpha-version product, but I have been using and teaching with it for some time and found it to be highly reliable. In addition to delivering R over a web browser, it has features that make it easy to share and deliver individual and team work. For this class you will need a laptop with an up-to-date browser, but platform (Mac or Windows) or brower type (Safari, Chrome, Edge, etc) does not matter. 
 
-<br>
+In addition to the required material, below are a few resources I recommend to learn more about data science, business analytics, and learning R.
 
 #### Books
 
-* [Happy Git and GitHub for the useR](http://happygitwithr.com)
-* [R for Data Science](http://r4ds.had.co.nz)
-* [Data Visualization for Social Science](http://socviz.co)
-* [Text Mining with R](https://www.tidytextmining.com)
-
-The following books are not obligatory, but highly recommended.  Recommended in the sense that they should (will) become a valuable part of your scholarly library.  I will not use these books specifically in our class discussions, but may refer you to them for additional information.
-
+* [R for Data Science -- Open Access](http://r4ds.had.co.nz)
+* [Data Visualization for Social Science -- Open Access](http://socviz.co)
 * Angrist J, Pischke J-S. 2008. Mostly Harmless Econometrics: An Empiricist’s Companion. Princeton University Press: Princeton, NJ.
-* Dubin R. 1978. Theory Building (2nd Edition). New York: Free Press.
-* Popper K. 2002. The Logic of Scientific Discovery (2nd Edition). Routledge: London.
-* Morgan SL, Winship C. 2007. Counterfactuals and Causal Inference: Methods and Principles for Social Research. Cambridge University Press: New York.
-* Gelman A et al. 2013. Bayesian Data Analysis (3rd Edition). CRC press: Boca Raton, FL.
-* Cook TD, Campbell DT. 1979. Quasi-Experimentation: Design and Analysis Issues for Field Settings. Houghton Mifflin: Boston, MA.
-* Cohen J, Cohen P, West SG, Aiken LS. 2003. Applied Multiple Regression/Correlation Analysis for the Behavioral Sciences. Erlbaum: Maywah, NJ.
-* Bollen KA. 1989. Structural Equations with Latent Variables. John Wiley: New York.
-* Wooldridge JM. 2010. Econometric Analysis of Cross Section and Panel Data. MIT Press: Cambridge, MA.
-
-<br>
+* Kline, R.B., 2015. Principles and Practice of Structural Equation Modeling, Fourth Ed. Guilford Publications, New York.
+* Pearl, J., 2018. The Book of Why: The New Science of Cause and Effect. Basic Books, New York.
+* Pearl, J., 2009. Causality: Models, Reasoning, and Inference, 2nd Ed. Cambridge University Press, New York.
 
 #### Blogs
 
-* [Mine!](http://www.drbanderson.com)
-* [Retraction Watch](http://retractionwatch.com)
-* [DataColada](http://datacolada.org)
+* [Mine!](https://www.drbanderson.com)
+* [Freakonomics](http://freakonomics.com)
+* [FiveThirtyEight](https://fivethirtyeight.com)
 * [Andrew Gelman's Blog](http://andrewgelman.com)
 * [Simply Statistics](http://simplystatistics.org)
+* [DataColada](http://datacolada.org)
 
-<br>
+#### Learning R and R Studio 
 
-#### R and Related Resources 
-
+* [R Studio Primers](https://rstudio.cloud/learn/primers)
+* [DataCamp](https://www.datacamp.com/)
+* [Learning R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
 * [How to use the rstanarm package](https://cran.r-project.org/web/packages/rstanarm/vignettes/rstanarm.html)
-* [GitHub documents with R Markdown](http://rmarkdown.rstudio.com/github_document_format.html)
-* [Using Skimr](https://cran.r-project.org/web/packages/skimr/vignettes/Using_skimr.html)
-* [Creating HTML tables with knitr::kable and kableExtra](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
-* [The `lavaan` project](http://lavaan.ugent.be/)
-* [Visualizing missing data with naniar](http://naniar.njtierney.com/articles/getting-started-w-naniar.html)
-* [Table of Conjugate Priors](https://en.wikipedia.org/wiki/Conjugate_prior#Table_of_conjugate_distributions)
 
 <br>
 
