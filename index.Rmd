@@ -111,29 +111,21 @@ To Be Added
 
 #### Assessment Breakdown
 
-* Attendance & Participation: 30%
-* Lab Exercises: 20%
-* Study Preregistration: 50%
+* Individual Assessments: 30% (6 X 5pts)
+* Team Delivarables: 60% (6 x 10pts)
+* Individual Paper: 10% (1 x 10pts)
 
+#### Individual Assessments
+
+You will complete an individual assessment before each class period. These are typically completion-based assessments, but they *must* be completed before our session. You will find the assessments in our RStudio.cloud workspace, and please note that I will typically release RStudio.cloud workspaces sequentially---I release the workspace for session 2 after we complete session 1.
+
+#### Team Deliverables
+
+Your team will complete a deliverable during each class session. Typically these deliverables involve writing up the results of an analytics project we completed in class. I provide these deliverables at the start of each class session, along with a grading rubric. 
 
 #### Individual Paper
 
-Each student will submit a 2-3 page reflection paper and address the following questions.  (1)  Explain how two of the concepts we talked about in class might be relevant to the way you and your organization use data to make decisions.  (2)     Identify 2 or 3 things that you found challenging in the course.  Explain why you believe these things were challenging for you.  Successful papers will thoughtfully address these questions in a clear, concise, and organized way.
-
-
-
-
-#### Attendance & Participation
-
-From a pedagogical perspective, we maximize student comprehension when we combine reading materials, performing experiential activities, and discussion with peers.  Readings are a required element for classroom participation, and experiential activities happen in the lab and through the large proposal project.  That means discussion is our third critical assessment mechanism, and it takes your active involvement, preparation, and participation to add value to all of us.  This is not, however, an MBA class where you are competing for ‘airtime.’  We are scholars and scientists, and discussion is an important way in which we communicate and improve our work.  My expectation is that you will meaningfully contribute to each class session by engaging in our conversations and by asking--and answering--questions.  Yes, I will cold-call if you are not meeting this expectation.  The easiest way to lose points is to be demonstrably unprepared or to behave in a rude, unprofessional manner.  I have every expectation however that you will earn the maximum points available for this assessment.  
-
-#### Lab Exercises
-
-During most lab sessions, we will have a brief assessment exercise.  Most often these will be completion exercises that you finish during that session, and that we will debrief that day.  
-
-#### Study Pregistration
-
-The main deliverable in the class will be a study preregistration, accompanied by any necessary [UMKC Institutional Review Board](http://ors.umkc.edu/research-compliance-(iacuc-ibc-irb-rsc)/institutional-review-board-(irb)) approval. We will cover the specific deliverable requirements in a Lab Session on 8 Feb, and please see the course schedule for deliverable due-dates.
+You will write a 3-4 page reflection paper due one week after the conclusion of the course addressing three questions: 1) What surprised you most about the course; 2) What challenged you the most in the course; and 3) How would you improve the course for future students. 
 
 #### Grading Scale
 
