@@ -19,9 +19,13 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 This course Investigates the use of sample data for purposes of estimating, predicting, forecasting and explaining correlations among varied observations. Students will apply the concepts of probability theory, central tendency, sampling, inference, modeling and forecasting to help solve managerial problems and to support decision processes. This course also provides students with an understanding of the role data plays in today's organizations. Because business analytics has become a key component in accomplishing strategic and operational goals, students will become familiar with the concepts and principles of business analytics to support managerial decision making.
 
+<br>
+
 #### Course Purpose
 
+<center>
 *Learn from your data, but your data should not be your teacher.* ~ Rex Kline
+</center>
 
 Statistics is not a subject that many students long to take. Many of you may have already had a statistics course as an undergraduate that, to put it politely, left you dissatisfied (as in you could not wait for the class to be over!).  
 
@@ -33,7 +37,11 @@ The underlying goal of a good data science course is to improve your ability to 
 
 If you are willing to be a little uncomfortable, if you are willing to accept that statistics is not as black and white as you might think, and if you are willing to think a little more like a scientist when you approach data and analyses, then I believe this will be one of the funnest courses of your tenure at the Bloch School.
 
+<center>
 *The data may not contain the answer. The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data.* ~ John Tukey
+</center>
+
+<br>
 
 #### Course Learning Objectives
 
@@ -46,6 +54,8 @@ If you are willing to be a little uncomfortable, if you are willing to accept th
 | **Teamwork:** Students will demonstrate the communication and interpersonal skills needed for effective collaboration and creative problem-solving, as well as the versatility to add value in a variety of team roles – leader, expert, facilitator, etc. | Students will demonstrate their ability to collectively and collaboratively research, present and solve business issues, while using data and statistical thought to identify business opportunities. |
 | **Strategic Leadership:** Students will demonstrate the ability to 1) diagnose complex business situations, recognizing key issues, tensions and dilemmas; and 2) articulate decisions and action plans that reflect comprehensive understanding of the human, political, and cultural context as well as nuanced ways of building influence and support. | Students will demonstrate their understanding of applying data and analytics to the strategic planning process. |
 
+<br>
+
 #### Class Format
 
 This is not a traditional lecture-based course. I use a modified version of the ‘flipped classroom’ format, which means that you will read blog posts, academic papers, watch a video before each period, and complete an assessment exercise. During class we will focus on solving a problem or problems using exercises, team activities, additional assessments, and an open discussion. Success in this course is a function of your engagement. I cannot stress this point enough--you must engage with the material and with your peers. Data science is a contact sport---you must come to each and every class prepared and ready to contribute!
@@ -53,12 +63,13 @@ This is not a traditional lecture-based course. I use a modified version of the 
 <br>
 
 ***
-
 ### Course Materials
 
 In addition to the books, blogs, and other resources listed below, you can find all of the readings available through the [UMKC Library](https://library.umkc.edu/mnl), [Google Scholar](https://scholar.google.com/) (for off-campus access, I encourage you to use the [UMKC VPN service](http://www.umkc.edu/is/support/services/VPN/)), or direct link in this document.  Please remember to bring a laptop to each session.  You will also need to have [R version 3.4.3 or higher](https://cran.r-project.org/) and [RStudio 1.1.383 or higher](https://www.rstudio.com/products/rstudio/download/#download) installed on your laptop.
 
 We will use the [RDTT IV Spring 2018](https://rdttivspring2018.slack.com/) Slack workspace as our primary course management system, along with our [RDTT IV Organization](https://github.com/RDTT-IV) on GitHub.
+
+<br>
 
 #### Books
 
@@ -79,6 +90,8 @@ The following books are not obligatory, but highly recommended.  Recommended in 
 * Bollen KA. 1989. Structural Equations with Latent Variables. John Wiley: New York.
 * Wooldridge JM. 2010. Econometric Analysis of Cross Section and Panel Data. MIT Press: Cambridge, MA.
 
+<br>
+
 #### Blogs
 
 * [Mine!](http://www.drbanderson.com)
@@ -86,6 +99,8 @@ The following books are not obligatory, but highly recommended.  Recommended in 
 * [DataColada](http://datacolada.org)
 * [Andrew Gelman's Blog](http://andrewgelman.com)
 * [Simply Statistics](http://simplystatistics.org)
+
+<br>
 
 #### R and Related Resources 
 
@@ -102,7 +117,13 @@ The following books are not obligatory, but highly recommended.  Recommended in 
 ***
 ### Course Schedule
 
-To Be Added
+<center>
+<img src="DSWorkflowGraphic.png" width="500" height="238" alt="Data Science Workflow">
+</center>
+
+<br>
+
+Each course session touches on the entire data science workflow shown in the graphic, but will emphasize one specific area. Over the course, you should become comfortable with this workflow and be able to use it in future data science projects. 
 
 <br>
 
@@ -115,17 +136,25 @@ To Be Added
 * Team Delivarables: 60% (6 x 10pts)
 * Individual Paper: 10% (1 x 10pts)
 
+<br>
+
 #### Individual Assessments
 
 You will complete an individual assessment before each class period. These are typically completion-based assessments, but they *must* be completed before our session. You will find the assessments in our RStudio.cloud workspace, and please note that I will typically release RStudio.cloud workspaces sequentially---I release the workspace for session 2 after we complete session 1.
+
+<br>
 
 #### Team Deliverables
 
 Your team will complete a deliverable during each class session. Typically these deliverables involve writing up the results of an analytics project we completed in class. I provide these deliverables at the start of each class session, along with a grading rubric. 
 
+<br>
+
 #### Individual Paper
 
 You will write a 3-4 page reflection paper due one week after the conclusion of the course addressing three questions: 1) What surprised you most about the course; 2) What challenged you the most in the course; and 3) How would you improve the course for future students. 
+
+<br>
 
 #### Grading Scale
 
@@ -152,7 +181,7 @@ You will write a 3-4 page reflection paper due one week after the conclusion of 
 | About the... | Details... |
 |:---------------|:-------------------------------------------------------|
 | Class Sessions | [EMBA course calendar](https://bloch3.umkc.edu/wp-content/uploads/2018/03/Recruiting-Calendar.pdf) | 
-| Office Hours | By appointment. |
+| Office Hours | Please contact me for an appointment: andersonbri@umkc.edu or (p) 816.235.2316. My office is BEH 321. |
 | Catalog Info | DSOM 5509---Applied Statistical Methods |
 | Credit Hours | 2 |
 | Prerequisites | Student must be enrolled in the Executive MBA program and in good academic standing. |
@@ -167,7 +196,7 @@ You will write a 3-4 page reflection paper due one week after the conclusion of 
 
 | Topic... | Services... |
 |:---------------|:-------------------------------------------------------|
-| Technology Support | [Online](https://www.umkc.edu/IS/comments_or_problems.asp), [Helpdesk Chat](https://home-c6.incontact.com/inContact/ChatClient/ChatClientPatron.aspx?poc=f82230de-b694-4fa2-9678-febda492d489&bu=4593164), p(816-235-6700), email: callcenter@umkc.edu |
+| Technology Support | [Online](https://www.umkc.edu/IS/comments_or_problems.asp), [Helpdesk Chat](https://home-c6.incontact.com/inContact/ChatClient/ChatClientPatron.aspx?poc=f82230de-b694-4fa2-9678-febda492d489&bu=4593164), (p) 816.235.6700, email: callcenter@umkc.edu |
 | UMKC Alert | [Sign up for the UMKC Alert Emergency Information Center](https://www.umkc.edu/umkcalert/default.asp) to receive real-time updates on severe weather, medical emergency, fire, chemical spill, evacuation, unauthorized persons, police emergency, radioactive release, flood, earthquake, tornado warning, bomb threat, and active shooter. |
 | Police Department | The fundamental mission of the University Police force is to provide the leadership and professional support required to sustain and improve the University System’s efforts to develop a balanced police-University community effort against any lawlessness or disorderly conduct which could interfere with the general missions of the University System. As such, the [UMKC Police Department](https://www.umkc.edu/finadmin/police/default.asp) is an essential university partner promoting a safe and orderly learning environment and enhanced quality of life with a reduction of crime, social disorder and fear of crime. |
 | Disability Services | To obtain disability related accommodations and/or auxiliary aids, students with disabilities must contact the [Office of Services for Students with Disabilities](https://info.umkc.edu/disability-services/) (OSSD) as soon as possible. To contact OSSD, call (816) 235-5696 or email at disability@umkc.edu. You may also visit the office in-person at 5110 Oak Street, Suite 225, Monday-Friday from 8:30-5:00. Once verified, OSSD will notify the course instructor and outline the accommodation and/or auxiliary aids to be provided. |
@@ -204,8 +233,7 @@ You will write a 3-4 page reflection paper due one week after the conclusion of 
 <center>
 Brian S. Anderson, Ph.D. | Associate Professor of Entrepreneurship | andersonbri@umkc.edu  
 Henry W. Bloch School of Management | University of Missouri - Kansas City  
-**[entrepreneurship.bloch.umkc.edu](http://www.entrepreneurship.bloch.umkc.edu)**  
-(c) Brian S. Anderson, 2019  
+**[entrepreneurship.bloch.umkc.edu](http://www.entrepreneurship.bloch.umkc.edu)**
 </center>
 </small>
 
