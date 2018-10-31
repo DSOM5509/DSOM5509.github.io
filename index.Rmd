@@ -15,23 +15,19 @@ output:
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
-### Course Description
-
-This course Investigates the use of sample data for purposes of estimating, predicting, forecasting and explaining correlations among varied observations. Students will apply the concepts of probability theory, central tendency, sampling, inference, modeling and forecasting to help solve managerial problems and to support decision processes. This course also provides students with an understanding of the role data plays in today's organizations. Because business analytics has become a key component in accomplishing strategic and operational goals, students will become familiar with the concepts and principles of business analytics to support managerial decision making.
-
-<br>
-
-#### Course Purpose
+### Course Purpose
 
 <center>
 *Learn from your data, but your data should not be your teacher.* ~ Rex Kline
 </center>
 
+<br>
+
 Statistics is not a subject that many students long to take. Many of you may have already had a statistics course as an undergraduate that, to put it politely, left you dissatisfied (as in you could not wait for the class to be over!).  
 
 If that’s the case, I’m hoping that you have a different experience in this class.
 
-I am passionate about data science and its power to enhance decision making in organizations---and in your personal life, for that matter. While there is growing interest and recognition in the power of data science for business, and a commensurate growth of tools available to conduct large scale analysis, the fundamentals of applied statistics remain much the same as they have been for decades. This is our focus---learning the fundamentals that apply whether you are looking at a correlation or a negative binominal regression. More importantly though, we'll be talking about how to best integrate data science into your decision making, how to be a better consumer of statistical analysis products, and how to better manage research and data science projects.  This is a foundations course, and one that will provide a valuable knowledge base during your time at Bloch and beyond. 
+I am passionate about data science and its power to enhance decision making in organizations---and in your personal life, for that matter. While there is growing interest and recognition in the power of data science for business, and a commensurate growth of tools available to conduct large scale analysis, the fundamentals of applied statistics remain much the same as they have been for decades. This is our focus---learning the fundamentals that apply whether you are looking at a correlation or a negative binomial regression. More importantly though, we'll be talking about how to best integrate data science into your decision making, how to be a better consumer of statistical analysis products, and how to better manage research and data science projects.  This is a foundations course, and one that will provide a valuable knowledge base during your time at Bloch and beyond. 
 
 The underlying goal of a good data science course is to improve your ability to think statistically. Our goal is is to understand probability, to identify meaningful questions, to tease out potential solutions to these problems, and to use those insights to make better decisions and predictions. This is fundamentally a dynamic process that unfolds under uncertainty---there will always be an element of randomness to our analyses and to how the world unfolds around us. That means data science has more than a little ‘art’ to its (useful) practice!
 
@@ -43,7 +39,7 @@ If you are willing to be a little uncomfortable, if you are willing to accept th
 
 <br>
 
-#### Course Learning Objectives
+#### Learning Objectives
 
 | Executive MBA SLOs | DSOM 5509 SLOs |
 |:-------------------------------|:-------------------------------|
@@ -54,9 +50,7 @@ If you are willing to be a little uncomfortable, if you are willing to accept th
 | **Teamwork:** Students will demonstrate the communication and interpersonal skills needed for effective collaboration and creative problem-solving, as well as the versatility to add value in a variety of team roles – leader, expert, facilitator, etc. | Students will demonstrate their ability to collectively and collaboratively research, present and solve business issues, while using data and statistical thought to identify business opportunities. |
 | **Strategic Leadership:** Students will demonstrate the ability to 1) diagnose complex business situations, recognizing key issues, tensions and dilemmas; and 2) articulate decisions and action plans that reflect comprehensive understanding of the human, political, and cultural context as well as nuanced ways of building influence and support. | Students will demonstrate their understanding of applying data and analytics to the strategic planning process. |
 
-<br>
-
-#### Class Format
+#### Format
 
 This is not a traditional lecture-based course. I use a modified version of the ‘flipped classroom’ format, which means that you will read blog posts, academic papers, watch videos, and complete an assessment exercise. During our in-class sessions we will focus on solving a problem or problems using live cases, exercises, team activities, additional assessments, and an open discussion. Success in this course is a function of your engagement. I cannot stress this point enough--you must engage with the material and with your peers. Data science is a contact sport---you must come to each and every session prepared and ready to contribute!
 
@@ -67,7 +61,7 @@ This is not a traditional lecture-based course. I use a modified version of the 
 
 You can find links to all required videos and readings below. I've noted the readings that require you to be on campus, logged in to the [UMKC VPN](http://www.umkc.edu/is/support/services/VPN/), or by logging on to the [UMKC Library](https://library.umkc.edu/mnl). 
 
-We will be using [R](https://cran.r-project.org) and [R Studio](https://www.rstudio.com) in this course. There is no software for you to install fortunately, because we are using a new platform called [R Studio Cloud](https://rstudio.cloud/). R Studio Cloud is a alpha-version product, but I have been using and teaching with it for some time and found it to be highly reliable. In addition to delivering R over a web browser, it has features that make it easy to share and deliver individual and team work. For this class you will need a laptop with an up-to-date browser, but platform (Mac or Windows) or brower type (Safari, Chrome, Edge, etc) does not matter. 
+We will be using [R](https://cran.r-project.org) and [R Studio](https://www.rstudio.com) in this course. There is no software for you to install fortunately, because we are using a new platform called [R Studio Cloud](https://rstudio.cloud/). R Studio Cloud is a alpha-version product, but I have been using and teaching with it for some time and found it to be highly reliable. In addition to delivering R over a web browser, it has features that make it easy to share and deliver individual and team work. For this class you will need a laptop with an up-to-date browser, but platform (Mac or Windows) or browser type (Safari, Chrome, Edge, etc) does not matter. 
 
 In addition to the required material, below are a few resources I recommend to learn more about data science, business analytics, and learning R.
 
@@ -94,6 +88,7 @@ In addition to the required material, below are a few resources I recommend to l
 * [R Studio Primers](https://rstudio.cloud/learn/primers)
 * [DataCamp](https://www.datacamp.com/)
 * [Learning R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
+* [R Syntax Comparison Cheatsheet](http://www.science.smith.edu/~amcnamara/Syntax-cheatsheet.pdf)
 * [How to use the rstanarm package](https://cran.r-project.org/web/packages/rstanarm/vignettes/rstanarm.html)
 
 <br>
@@ -109,6 +104,107 @@ In addition to the required material, below are a few resources I recommend to l
 
 Each course session touches on the entire data science workflow shown in the graphic, but will emphasize one specific area. Over the course, you should become comfortable with this workflow and be able to use it in future data science projects. 
 
+#### Session 1: 11 Jan 2019
+
+**Generating Data & Asking Good Questions**
+
+*Readings*
+
+* [Constructing a Data Analysis](https://simplystatistics.org/2018/08/24/constructing-a-data-analysis/)
+* [Creativity in Data Analysis](https://simplystatistics.org/2018/06/26/creativity/)
+* [More Evidence That Nutrition Studies Don’t Always Add Up](https://www.nytimes.com/2018/09/29/sunday-review/cornell-food-scientist-wansink-misconduct.html)
+* [Stitch Fix Algorithms Tour](https://algorithms-tour.stitchfix.com)
+* [What’s in a Name?](https://eng.lyft.com/whats-in-a-name-ce42f419d16c)
+* [Why You’re Not Getting Value from Your Data Science](https://hbr.org/2016/12/why-youre-not-getting-value-from-your-data-science)
+
+*Videos*
+
+* Course introduction
+* Working in R Studio Cloud
+
+<br>
+
+#### Session 2: 26 Jan 2019
+
+**Measures, Proxies, Constructs & Measurement Error**
+
+*Readings* 
+
+* [Partitioning the Variation in Data](https://simplystatistics.org/2018/07/23/partitioning-the-variation-in-data/)
+* [Scientific Debt](http://varianceexplained.org/r/scientific-debt/)
+* [Measurement Error as an Endogeneity Problem](https://www.drbanderson.com/2017/07/14/measurement-error-as-an-endogeneity-problem/)
+* [That Pesky (Cronbach's) Alpha](https://www.drbanderson.com/2017/09/19/that-pesky-cronbach-s-alpha/)
+
+*Videos* 
+
+* Different ways of measuring the same thing
+
+<br>
+
+#### Session 3: 8 Feb 2019
+
+**Data Wrangling**
+
+*Readings*
+
+* [How to Share Data for Collaboration](https://peerj.com/preprints/3139.pdf)
+* [Tidy Data](https://www.drbanderson.com/2017/11/09/tidy-data/)
+* [Data Wrangling](https://www.drbanderson.com/2018/01/26/data-wrangling/)
+
+*Videos*
+
+* Data wrangling with the tidyverse
+
+<br>
+
+#### Session 4: 23 Feb 2019
+
+**Making Causal Claims & Predicting the Future**
+
+*Readings*
+
+* [Guidelines For AB Testing](http://hookedondata.org/Guidelines-for-AB-Testing/)
+* [Why ask Why? Forward Causal Inference and Reverse Causal Questions](http://www.stat.columbia.edu/~gelman/research/unpublished/reversecausal_13oct05.pdf)
+* [Establishing a Causal Relationship is Hard](https://www.drbanderson.com/2018/09/06/establishing-a-causal-relationship-is-hard-evaluating-a-causal-claim-isn-t-as-difficult/)
+
+*Videos*
+
+* Evaluating regression models
+
+<br>
+
+#### Session 5: 8 March 2019
+
+**Constructing a Narrative**
+
+*Readings*
+
+* [The Benefits of Reproducible Workflows](https://andrewgelman.com/2014/09/19/never-happened-r-markdown/)
+* [Trustworthy Data Analysis](https://simplystatistics.org/2018/06/04/trustworthy-data-analysis/)
+* [Prioritizing Data Science Work](https://towardsdatascience.com/prioritizing-data-science-work-936b3765fd45)
+* [Relationships in Data Analysis](https://simplystatistics.org/2018/04/30/relationships-in-data-analysis/)
+
+*Videos*
+
+* Constructing visualizations with ggplot2
+
+<br>
+
+#### Session 6: 23 March 2019
+
+**Multilevel Modeling**
+
+*Readings*
+
+* [Multilevel Modeling](https://www.drbanderson.com/2018/05/04/multilevel-modeling/)
+* [Crawling the Internet: Data Science within a Large Engineering System](http://www.unofficialgoogledatascience.com/2018/07/by-bill-richoux-critical-decisions-are.html?m=1)
+* [What is a Successful Data Analysis?](https://simplystatistics.org/2018/04/17/what-is-a-successful-data-analysis/)
+* [Visualizing Panel Data](https://www.drbanderson.com/2017/10/03/visualizing-panel-data/)
+
+*Videos*
+
+* The basics of working with multilevel data
+
 <br>
 
 ***
@@ -117,14 +213,14 @@ Each course session touches on the entire data science workflow shown in the gra
 #### Assessment Breakdown
 
 * Individual Assessments: 30% (6 X 5pts)
-* Team Delivarables: 60% (6 x 10pts)
+* Team Deliverables: 60% (6 x 10pts)
 * Individual Paper: 10% (1 x 10pts)
 
 <br>
 
 #### Individual Assessments
 
-You will complete an individual assessment before each class period. These are typically completion-based assessments, but they *must* be completed before our session. You will find the assessments in our RStudio.cloud workspace, and please note that I will typically release RStudio.cloud workspaces sequentially---I release the workspace for session 2 after we complete session 1.
+You will complete an individual assessment before each class period. These are typically completion-based assessments, but they *must* be completed before our session. You will find the assessments in our RStudio.cloud workspace, and please note that I will typically release RStudio.cloud work spaces sequentially---I release the workspace for session 2 after we complete session 1.
 
 <br>
 
@@ -142,20 +238,33 @@ You will write a 3-4 page reflection paper due one week after the conclusion of 
 
 #### Grading Scale
 
-| Grade | Evaluation | Min. Percent |
-| ---- | ---------------- | --- |
-| A | Superior/Excellent | 93 |
-| A- |   | 90 |
-| B+ |   | 87 |
-| B | Good/Above Average | 83 |
-| B- |   | 80 |
-| C+ |   | 77 |
-| C | Competent/Average | 73 | 
-| C- |   | 70 |
-| D+ |   | 67 |
-| D | Minimum Passing | 63 |
-| D- |   | 60 |
-| F | Failing | <60 |
+-------------------------------------------------------------
+Grade  Evaluation         Min. Percent
+------ ------------------ ------------
+A      Superior/Excellent 93
+
+A-                        90
+
+B+                        87
+
+B      Good/Above Average 83
+
+B-                        80
+
+C+                        77
+
+C      Competent/Average  73
+
+C-                        70
+
+D+                        67
+
+D      Minimum Passing    63
+
+D-                        60
+
+F      Failing            <60
+-------------------------------------------------------------
 
 <br>
 
