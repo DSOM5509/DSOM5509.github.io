@@ -52,7 +52,7 @@ If you are willing to be a little uncomfortable, if you are willing to accept th
 
 #### Format
 
-This is not a traditional lecture-based course. I use a modified version of the ‘flipped classroom’ format, which means that you will read blog posts, academic papers, watch videos, and complete an assessment exercise. During our in-class sessions we will focus on solving a problem or problems using live cases, exercises, team activities, additional assessments, and an open discussion. Success in this course is a function of your engagement. I cannot stress this point enough--you must engage with the material and with your peers. Data science is a contact sport---you must come to each and every session prepared and ready to contribute!
+This is not a traditional lecture-based course. I use a modified version of the ‘flipped classroom’ format, which means that you will read blog posts, academic papers, watch videos, and complete an assessment exercise. During our in-class sessions we will focus on solving a problem or problems using live cases, exercises, team activities, additional assessments, and an open discussion. Success in this course is a function of your engagement. I cannot stress this point enough---you must engage with the material and with your peers. Data science is a contact sport. You must come to each and every session prepared and ready to contribute!
 
 <br>
 
@@ -103,6 +103,8 @@ In addition to the required material, below are a few resources I recommend to l
 <br>
 
 Each course session touches on the entire data science workflow shown in the graphic, but will emphasize one specific area. Over the course, you should become comfortable with this workflow and be able to use it in future data science projects. 
+
+<br>
 
 #### Session 1: 11 Jan 2019
 
