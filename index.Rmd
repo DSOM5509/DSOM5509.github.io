@@ -121,7 +121,7 @@ Each course session touches on the entire data science workflow shown in the gra
 
 *Videos*
 
-* Course introduction
+* [Course introduction](https://youtu.be/LYGdEfQNKNw)
 * Working in R Studio Cloud
 
 <br>
