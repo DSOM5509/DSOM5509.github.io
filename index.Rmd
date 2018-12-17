@@ -106,7 +106,7 @@ Each course session touches on the entire data science workflow shown in the gra
 
 <br>
 
-#### Session 1: 11 Jan 2019
+#### Session 1: 4 Jan 2019
 
 **Generating Data & Asking Good Questions**
 
