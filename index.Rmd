@@ -139,7 +139,7 @@ Each course session touches on the entire data science workflow shown in the gra
 
 *Videos* 
 
-* Different ways of measuring the same thing
+* [Different ways of measuring the same thing](https://youtu.be/h4aVcxJgOqo)
 
 <br>
 
