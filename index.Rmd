@@ -124,6 +124,11 @@ Each course session touches on the entire data science workflow shown in the gra
 * [Course introduction](https://youtu.be/LYGdEfQNKNw)
 * [Working in R Studio Cloud](https://youtu.be/lFximWuEaPw)
 
+*Deck & Notes*
+
+* [Live coding exercise](Session1LiveCoding.pdf)
+* [Slide deck](Session1.html)
+
 <br>
 
 #### Session 2: 26 Jan 2019
