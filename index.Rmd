@@ -160,7 +160,7 @@ Each course session touches on the entire data science workflow shown in the gra
 
 *Videos*
 
-* Data wrangling with the tidyverse
+* [Data wrangling with the tidyverse](https://youtu.be/7mU7khywBGM)
 
 <br>
 
@@ -206,6 +206,7 @@ Each course session touches on the entire data science workflow shown in the gra
 * [Multilevel Modeling](https://www.drbanderson.com/2018/05/04/multilevel-modeling/)
 * [Crawling the Internet: Data Science within a Large Engineering System](http://www.unofficialgoogledatascience.com/2018/07/by-bill-richoux-critical-decisions-are.html?m=1)
 * [What is a Successful Data Analysis?](https://simplystatistics.org/2018/04/17/what-is-a-successful-data-analysis/)
+* [The Tentpoles of Data Science](https://simplystatistics.org/2019/01/18/the-tentpoles-of-data-science/)
 * [Visualizing Panel Data](https://www.drbanderson.com/2017/10/03/visualizing-panel-data/)
 
 *Videos*
