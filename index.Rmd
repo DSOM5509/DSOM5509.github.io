@@ -146,6 +146,11 @@ Each course session touches on the entire data science workflow shown in the gra
 
 * [Different ways of measuring the same thing](https://youtu.be/h4aVcxJgOqo)
 
+*Deck & Notes*
+
+* [Live coding exercise](Session2LiveCoding.pdf)
+* [Slide deck](Session2.html)
+
 <br>
 
 #### Session 3: 8 Feb 2019
