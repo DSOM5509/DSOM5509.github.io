@@ -181,7 +181,7 @@ Each course session touches on the entire data science workflow shown in the gra
 
 *Videos*
 
-* Evaluating regression models
+* [Evaluating regression models](https://youtu.be/UfgbdtAEwNI)
 
 <br>
 
