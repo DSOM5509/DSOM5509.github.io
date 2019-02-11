@@ -167,6 +167,11 @@ Each course session touches on the entire data science workflow shown in the gra
 
 * [Data wrangling with the tidyverse](https://youtu.be/7mU7khywBGM)
 
+*Notes*
+
+* [Live coding exercise--Visualizing regression](Session3LiveCoding_Simulation.pdf)
+* [Live coding exercise--Bayesian linear models](Session3LiveCoding_Bayesian.pdf)
+
 <br>
 
 #### Session 4: 23 Feb 2019
