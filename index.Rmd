@@ -154,7 +154,8 @@ Each course session touches on the entire data science workflow shown in the gra
 *Deliverable Feedback*
 
 * [Session 2 Team Deliverable (final .pdf)](Session2TeamDeliverable.pdf)
-* [Session 2 Team Deliveranle (Markdown)](Session2TeamDeliverable.Rmd)
+* [Session 2 Team Deliverable (Markdown)](Session2TeamDeliverable.Rmd)
+    * [Session 2 Deliverable Feedback](https://youtu.be/NLMt_J2k1_k)
 
 <br>
 
@@ -177,6 +178,7 @@ Each course session touches on the entire data science workflow shown in the gra
 * [Live coding exercise--Visualizing regression](Session3LiveCoding_Simulation.pdf)
 * [Live coding exercise--Bayesian linear models](Session3LiveCoding_Bayesian.pdf)
 * [Live coding exercise--Data wrangling](Session3LiveCoding_Wrangling.html)
+    * [Live Coding Helper Video](https://youtu.be/IxXYJ4x7KN4)
 
 <br>
 
