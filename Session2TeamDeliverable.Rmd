@@ -1,0 +1,142 @@
+---
+title: "Evaluating the Risk Training Program Proposal"
+author: "Brian Anderson"
+date: "11 February 2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r}
+# Load libraries I need
+library(tidyverse)
+library(psych)
+library(rstanarm)
+library(bayesplot)
+library(huxtable)
+library(broom)
+
+# Load and wrangle the data
+risk.df <- read_csv("DSOM5509.csv") %>% 
+  select(RISK1:RISK3, SGR) %>% 
+  na.omit() %>% 
+  mutate(RiskTaking = (RISK1 + RISK2 + RISK3) / 3) 
+```
+
+## Recommendation
+
+The data does not support investing in a training program designed to increase managerial risk-taking on the basis that a risk-taking mindset improves firm performance. While my analysis suggests a positive change in sales growth rate as risk-taking increases, this effect is too small to have practical utility. I am also concerned with the reliability of the risk taking measures, to the point that we would be suspect of drawing any substantive conclusions from the data. 
+
+## Measurement Error
+
+My first concern is with the risk-taking measures. I used a method called Cronbach's alpha to evaluate the reliability of the measures---the extent to which the measures are capturing a similar underlying concept.
+
+Generally, the metric we are looking for is an *inter-item correlation* larger than 0.7. At this level, the measures all share at least half of their variance, that is, they move in a similar way. The larger this value, the better. 
+
+```{r, results = "hide"}
+# The results = "hide" option runs the chunk, but hides all output
+
+# Create a new dataframe to calculate alpha for risk-taking
+risk.alpha.df <- risk.df %>% 
+  select(RISK1:RISK3)
+
+# Calculate alpha using the `psych` package, and store the results in a new
+#  dataframe with only a single row/column
+alpha.df <- summary(alpha(risk.alpha.df)) %>% 
+  select(average_r)
+
+# Store the result in a new object that we will referece inline. The [1, 1]
+#  option references the cell at row = 1, column = 1. Then we round the value to
+#  two decimal places.
+risk.alpha <- round(alpha.df[1, 1], 2)
+```
+
+```{r}
+# In R Markdown, another way to run code is called 'in line'. This works like a 
+#  chunk, but in a smaller format. It's a handy way to integrate code/results
+#  directly into your writing. You will see a `r <code>` in the text below. This
+#  code calls our risk.alpha value directly in our paragraph.
+```
+
+In the data, the average inter-item correlation for the three risk taking measures is: `r risk.alpha`. While only `r .7 - risk.alpha` below the recommended 0.7 threshold, this value suggests that the measures only share `r 100 * round(risk.alpha^2, 2)`% of their variance---well below what we would expect from highly reliable measures. A reasonable conclusion is that the risk-taking measures likely suffer from material measurement error. As a result, we should be suspect about drawing substantive conclusions from any analyses of these measures, without taking additional steps to address the measurement error problem.
+
+## Visualizing the Risk-Taking---Sales Growth Rate Relationship
+
+```{r, fig.align = 'center', fig.height = 3, fig.width = 5}
+# If you look at the chunk options above, I changed a few of the defualts, to 
+#  adjust the alignment and size of the plot.
+ggplot(data = risk.df, aes(y = SGR, x = RiskTaking)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", aes(color = "Linear Trend")) + 
+  geom_smooth(method = "loess", aes(color = "Smoothed Trend")) + 
+  scale_color_manual(name = "Trends", values = c("blue", "red")) + 
+  labs(title = "Trivial Change in Sales Growth as Risk-Taking Increases",
+       subtitle = "Sample Size = 114",
+       y = "Sales Growth Rate (%)",
+       x = "Risk-Taking (7pt Likert Scale)") + 
+  # The base_size option changes the font size for the labels in the plot. The
+  #  default is 11, so my code is making the font size smaller.
+  theme_bw(base_size = 8)
+```
+
+As the figure above shows, there is a slight increase in sales growth rate as risk-taking increases. The blue line represents the linear trend, which is equivalent to the effect argued by the consultant to be "a strong positive relationship". The red line, however, represents a *smoothed* trend, which more closely resembles the actual relationship in the data. The grey bars surrounding both lines are the *confidence intervals*, or the margin of error around the estimated effect. As we can see from both trends, the lines stay very close to the "0%" line for sales growth rate. Visually, we can see that even though the slope increases, the margin of error suggests that the relationship could just as easily be perfectly flat---no real effect at all. 
+
+## Statistical Analyses
+
+I used two additional analyses to evaluate the consultant's claim. In my first analysis, I estimated a *Bayesian Linear Model*. In this analysis, I am replicating the consultant's model, but incorporating what I already expect about the relationship between risk-taking and sales growth rate---a small change.
+
+```{r}
+# Specify our model with a .2 prior on the mean posterior r-squared
+risk.model <- stan_lm(SGR ~ RiskTaking, data = risk.df,
+                      prior = R2(location = .2, what = "mean"),
+                      seed = 1, refresh = 0)
+
+# Here I am going to grab the posterior estimates for risk taking and for its
+#  standard deviation, which I can reference using inline code. I start by creating
+#  a summary version of the model results, and then I use the [x, y] notation to 
+#  grab the values from the data frame that I want.
+# Note also that for this notation I am using a double bracket [[]], which ensures
+#  that I get only the actual number that I want.
+risk.est.df <- tidy(risk.model)
+risk.param <- round(risk.est.df[[2, 2]], 2)
+risk.sd <- round(risk.est.df[[2, 3]], 2)
+
+# Next we will format the results in a table suitable for presentation. Note that 
+#  we are using the `huxreg` package for this.
+huxreg("Sales Growth Rate Change" = risk.model, stars = NULL,
+       coefs = c("Model Intercept" = "(Intercept)",
+                 "Risk Taking" = "RiskTaking"), 
+       note = "Standard deviation in parantheses.",
+       number_format = 2,
+       statistics = c("# Observations" = "nobs"))
+```
+
+The focal value we are interested in is the excepted change in sales growth rate as risk-taking increases by one unit (e.g., moving from a '5' to a '6'). This estimate is `r risk.param`, with a standard deviation of `r risk.sd`. To determine if this effect is reasonably different from zero, we look at the ratio of the estimate to its standard deviation, and generally want this value to be greater than 2.0---the larger the ratio, generally speaking, the larger the effect in the data. 
+
+From our analysis, we observed a ratio of `r round(risk.param/risk.sd, 2)`, which is `r round((risk.param/risk.sd) - 2, 2)` above our threshold level. This analysis supports our figure shown earlier---sales growth changes as risk-taking changes, but it is a trivial change.
+
+For my final analysis, we can visualize the uncertainty in our model results. In the figure below, we see a relatively wide *95% credibility interval* around our estimated effect. Ideally, we would want this interval to be as small as possible, reflecting less uncertainty in our model. We can say that with this data, we are 95% confident that sales growth rate will change from a little over 2% to a little under 4%. In our opinion, this is a too large of an estimated range, again given the data we have, to justify a significant investment in a managerial risk-taking training program.  
+
+```{r, fig.align = 'center', fig.height = 3, fig.width = 5}
+# Create a matrix of our posterior draws
+posterior <- as.array(risk.model)
+
+# Construct our plot of the posterior estimates. The mcmc_intervals function 
+#  returns a ggplot object, so the code that we have used earlier to format
+#  a ggplot object will also work here.
+mcmc_areas(posterior, pars = "RiskTaking") + 
+  # This code changes the y-axis label to be easier to read
+  scale_y_discrete(labels = c("RiskTaking" = "Risk Taking")) + 
+  labs(title = "Trivial Change in Sales Growth as Risk-Taking Increases",
+       subtitle = "95% Credibility Interval in Shaded Portion",
+       x = "Expected Change in Sales Growth",
+       caption = "Blue vertical line is the median expected change.") +
+  theme_bw(base_size = 8)
+
+```
+
+

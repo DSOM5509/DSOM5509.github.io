@@ -151,6 +151,11 @@ Each course session touches on the entire data science workflow shown in the gra
 * [Live coding exercise](Session2LiveCoding.pdf)
 * [Slide deck](Session2.html)
 
+*Deliverable Feedback*
+
+* [Session 2 Team Deliverable (final .pdf)](Session2TeamDeliverable.pdf)
+* [Session 2 Team Deliveranle (Markdown)](Session2TeamDeliverable.Rmd)
+
 <br>
 
 #### Session 3: 8 Feb 2019
@@ -171,6 +176,7 @@ Each course session touches on the entire data science workflow shown in the gra
 
 * [Live coding exercise--Visualizing regression](Session3LiveCoding_Simulation.pdf)
 * [Live coding exercise--Bayesian linear models](Session3LiveCoding_Bayesian.pdf)
+* [Live coding exercise--Data wrangling](Session3LiveCoding_Wrangling.html)
 
 <br>
 
