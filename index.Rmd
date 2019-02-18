@@ -211,7 +211,7 @@ Each course session touches on the entire data science workflow shown in the gra
 
 *Videos*
 
-* Constructing visualizations with ggplot2
+* [Constructing visualizations with ggplot2](https://youtu.be/ty9F2F3AnnU)
 
 <br>
 
