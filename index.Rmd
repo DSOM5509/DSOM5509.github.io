@@ -88,6 +88,7 @@ In addition to the required material, below are a few resources I recommend to l
 * [R Studio Primers](https://rstudio.cloud/learn/primers)
 * [DataCamp](https://www.datacamp.com/)
 * [Learning R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
+* [Tidyverse style guide](https://style.tidyverse.org)
 * [R Syntax Comparison Cheatsheet](http://www.science.smith.edu/~amcnamara/Syntax-cheatsheet.pdf)
 * [How to use the rstanarm package](https://cran.r-project.org/web/packages/rstanarm/vignettes/rstanarm.html)
 
