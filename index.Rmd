@@ -197,6 +197,10 @@ Each course session touches on the entire data science workflow shown in the gra
 
 * [Evaluating regression models](https://youtu.be/UfgbdtAEwNI)
 
+*Deck*
+
+* [Slide deck](Session4.html)
+
 <br>
 
 #### Session 5: 8 March 2019
