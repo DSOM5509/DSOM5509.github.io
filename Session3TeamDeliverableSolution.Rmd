@@ -1,0 +1,200 @@
+---
+title: "Understanding Employee Attrition"
+author: "Brian Anderson ~ 1 March 2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+# Again note that I'm setting the echo = FALSE option, to avoid having my chunks
+#  appear in the knitted document.
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.width = 4, fig.height = 2.5, fig.align = "center")
+```
+
+```{r}
+# Load libraries I need
+library(tidyverse)
+library(readxl)
+library(broom)
+library(kableExtra)
+
+# Load and wrangle the data. Note that I am only selecting the columns that I want.
+#  The advantage of using an import window is that I only need to work with the
+#  columns that I want---no need to take in the entire spreadsheet if I don't 
+#  have to.
+attrition.df <- read_excel("~/Google Drive/Teaching/DSOM 5509/Spring 2019/EmployeeAttrition.xlsx", 
+    col_types = c("blank", "blank", "text", 
+        "text", "blank", "numeric", "blank", 
+        "blank", "blank", "blank", "blank", 
+        "blank", "blank", "blank", "blank", 
+        "blank", "blank", "blank", "numeric", 
+        "blank", "blank", "blank", "blank", 
+        "blank"), skip = 3)
+
+# Set the new column names.
+# Original column names in order were:
+#  Attrition
+#  Business Travel
+#  Distance From Home (mi)
+#  Training Times Last Year
+column.names <- c("Attrition", "TravelFrequency", "CommuteDistance", "TrainingTimes")
+colnames(attrition.df) <- column.names
+
+# Trim the extra rows; these had notes in the original spreadsheet. The | character
+#  denotes "or", so you would read the code below as filter (select) all rows where
+#  Attriation is equivalent to "Yes" OR Attrition is equivalent to "No". 
+attrition.df <- attrition.df %>% 
+  filter(Attrition == "Yes" | Attrition == "No")
+
+# Convert the Attrition variable to a dichotomous variable. Note that by using an
+#  if_else command, dplyr will automatically convert the variable type to a 
+#  double from a character.
+attrition.df <- attrition.df %>% 
+  mutate(Attrition = if_else(Attrition == "Yes", 1, 0))
+
+# Convert and relevel the TravelFrequency factor variable. There is a natural order
+#  to the variable, and we want to specify that for interpretation purposes. We 
+#  are going to set "Non-Travel" as our baseline condition, and order up from 
+#  no travel to frequent travel.
+attrition.df <- attrition.df %>% 
+  mutate(TravelFrequency = as_factor(TravelFrequency),
+         TravelFrequency = fct_relevel(TravelFrequency, 
+                                       "Non-Travel", 
+                                       "Travel Rarely", 
+                                       "Travel Frequently"))
+```
+
+### Summary
+
+I identified three meaningful factors influencing the probability of an employee voluntarily leaving (attrition) the company:
+
+- The frequency of work-related travel
+- The commuting distance from home to the office
+- The number of training events attended in the past year
+
+The second and first factors increase the probability of attrition. As travel frequency and commuting distance increases, so does the probability of attrition. However, attending more training events *decreases* the probability of attrition. I used 1,470 employee records from our human resources management system in my analysis. These analyses are only meant to illustrate patterns in the data, and not to infer a causal connection between any of the factors and attrition. I recommend interpreting these relationships as a place to start more rigorous research into the causes of attrition. 
+
+***
+
+### Travel Frequency 
+
+```{r}
+travel.model <- lm(Attrition ~ TravelFrequency, data = attrition.df)
+travel.terms <- tibble(Variable = c("Baseline: No Travel", 
+                                    "Travel Rarely", 
+                                    "Travel Frequently"))
+
+travel.results <- tidy(travel.model) %>% 
+  mutate(lower.ci = estimate - (1.96 * std.error),
+         upper.ci = estimate + (1.96 * std.error)) %>% 
+  bind_cols(travel.terms) %>% 
+  select(Variable, estimate, lower.ci, upper.ci) %>% 
+  mutate_if(is.numeric, funs(100 * round(., 3)))
+```
+
+```{r}
+ggplot(data = travel.results %>% 
+         mutate(cumprob = cumsum(estimate),
+                Variable = fct_reorder(Variable, cumprob)),
+       aes(y = cumprob, x = Variable, group = 1)) + 
+  geom_point() +
+  geom_line(linetype = 2) +
+  labs(title = "Attrition Increases with Employee Travel Frequency",
+       y = "Probability of Attrition",
+       x = "") + 
+  theme_bw(base_size = 8)
+```
+
+There are three categories of travel frequency, as displayed in the figure above. There is a modest change in the probability of attrition when going from the baseline category of no travel, and a much larger change going from the travel rarely category to the travel frequently category.
+
+The following table highlights the expected change in the probability of attrition as we move from the baseline up through the travel frequently category. The *lower* and *upper* bounds represent the margin of error (confidence interval) around the change in probability. You can interpret the margin of error as the probability of the change in attrition could fall anywhere inside this range, given this data. 
+
+To relate the table to the figure, add the "Change in Attrition" column cumulatively to see the expected change in attrition; the expected probability of attrition for the *Travel Rarely* category is 7% plus the baseline value of 8%, so a cumulative 15% increase in the probability of attrition. 
+
+```{r}
+kable(travel.results, "latex", booktabs = T,
+      col.names = c(" ", "Change in Attrition", "Lower Bound", "Upper Bound")) %>% 
+  kable_styling(latex_options = "striped")
+```
+
+
+***
+
+### Commuting Distance 
+
+```{r}
+commute.model <- lm(Attrition ~ CommuteDistance, data = attrition.df)
+
+commute.terms <- tibble(Variable = c("Baseline: No Commute", 
+                                     "Each One Additional Mile"))
+
+commute.results <- tidy(commute.model) %>% 
+  mutate(lower.ci = estimate - (1.96 * std.error),
+         upper.ci = estimate + (1.96 * std.error)) %>% 
+  bind_cols(commute.terms) %>% 
+  select(Variable, estimate, lower.ci, upper.ci) %>% 
+  mutate_if(is.numeric, funs(100 * round(., 3)))
+```
+
+```{r}
+ggplot(data = attrition.df, aes(y = Attrition, x = CommuteDistance)) +
+  geom_smooth(method = "lm", formula = y ~ x) + 
+  scale_y_continuous(labels = scales::percent) + 
+  labs(title = "Attrition Increases with Employee Commute",
+       subtitle = "Margin of Error in Grey",
+       y = "Probability of Attrition",
+       x = "Commuting Distance (miles)") + 
+  theme_bw(base_size = 8)
+```
+
+In the figure above, we see a modest increase in the probability of attrition for each mile increase in employee commute. The grey bar represents the margin of error (confidence interval), and as before, the predicted probability could plausibly fall anywhere within this range. This is important because, for example, at short commutes, the predicted probability could be as high as ~16% in this data, while at very long commutes, the predicted probability could be as low as ~18%. With a possible ~2% difference, while commuting is a meaningful predictor of attrition, its effect may be modest.
+
+That said, as described in the below table, we would expect about a .5% change in the probability of attrition for each one mile increase in commuting distance. Also of note is our baseline level of attrition---with a commute of zero, we would expect about a 13% probability of attrition. 
+
+```{r}
+kable(commute.results, "latex", booktabs = T,
+      col.names = c(" ", "Change in Attrition", "Lower Bound", "Upper Bound")) %>% 
+  kable_styling(latex_options = "striped")
+```
+
+***
+
+### Training Frequency 
+
+```{r}
+train.model <- lm(Attrition ~ TrainingTimes, data = attrition.df)
+
+train.terms <- tibble(Variable = c("Baseline: No Training", 
+                                   "Each One Additional Training"))
+
+train.results <- tidy(train.model) %>% 
+  mutate(lower.ci = estimate - (1.96 * std.error),
+         upper.ci = estimate + (1.96 * std.error)) %>% 
+  bind_cols(train.terms) %>% 
+  select(Variable, estimate, lower.ci, upper.ci) %>% 
+  mutate_if(is.numeric, funs(100 * round(., 3)))
+```
+
+```{r}
+ggplot(data = attrition.df, aes(y = Attrition, x = TrainingTimes)) +
+  geom_smooth(method = "lm", formula = y ~ x) + 
+  scale_y_continuous(labels = scales::percent) + 
+  labs(title = "Attrition Decreases with Additional Training",
+       subtitle = "Margin of Error in Grey",
+       y = "Probability of Attrition",
+       x = "Number of Training Events (past year)") + 
+  theme_bw(base_size = 8)
+```
+
+Our last figure shows a fairly robust decrease in the probability of attrition for each additional training session attended in the past year. That said, the larger margin of error around our prediction suggests greater uncertainty about this relationship, and so we should interpret this model with caution. 
+
+In the table below, we see a 1.7% decrease in the probability of attrition for each additional training session, although that probability could plausibly range from as much of a 3.2% decrease to a far more modest .2% decrease in this data. A reasonable conclusion is that this data suggests that additional training lowers attrition, although why it does so, and having greater confidence in estimate, warrants additional study. 
+
+```{r}
+kable(train.results, "latex", booktabs = T,
+      col.names = c(" ", "Change in Attrition", "Lower Bound", "Upper Bound")) %>% 
+  kable_styling(latex_options = "striped")
+```
+

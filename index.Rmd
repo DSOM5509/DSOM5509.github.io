@@ -57,6 +57,7 @@ This is not a traditional lecture-based course. I use a modified version of the 
 <br>
 
 ***
+
 ### Course Materials
 
 You can find links to all required videos and readings below. I've noted the readings that require you to be on campus, logged in to the [UMKC VPN](http://www.umkc.edu/is/support/services/VPN/), or by logging on to the [UMKC Library](https://library.umkc.edu/mnl). 
@@ -95,6 +96,7 @@ In addition to the required material, below are a few resources I recommend to l
 <br>
 
 ***
+
 ### Course Schedule
 
 <center>
@@ -181,6 +183,11 @@ Each course session touches on the entire data science workflow shown in the gra
 * [Live coding exercise--Data wrangling](Session3LiveCoding_Wrangling.html)
     * [Live Coding Helper Video](https://youtu.be/IxXYJ4x7KN4)
 
+*Deliverable Feedback*
+
+* [Session 3 Team Deliverable (final .pdf)](Session3TeamDeliverableSolution.pdf)
+* [Session 3 Team Deliverable (Markdown)](Session3TeamDeliverableSolution.Rmd)
+
 <br>
 
 #### Session 4: 23 Feb 2019
@@ -239,6 +246,7 @@ Each course session touches on the entire data science workflow shown in the gra
 <br>
 
 ***
+
 ### Assessment
 
 #### Assessment Breakdown
@@ -251,13 +259,13 @@ Each course session touches on the entire data science workflow shown in the gra
 
 #### Individual Assessments
 
-You will complete an individual assessment before each class period. These are typically completion-based assessments, but they *must* be completed before our session. You will find the assessments in our RStudio.cloud workspace, and please note that I will typically release RStudio.cloud work spaces sequentially---I release the workspace for session 2 after we complete session 1.
+You will complete an individual assessment before each class period. These are typically completion-based assessments, but they *must* be completed before our session. You will find the assessments in our RStudio.cloud workspace, and please note that I will typically release RStudio.cloud workspaces sequentially---I release the workspace for session 2 after we complete session 1.
 
 <br>
 
 #### Team Deliverables
 
-Your team will complete a deliverable during each class session. Typically these deliverables involve writing up the results of an analytics project we completed in class. I provide these deliverables at the start of each class session, along with a grading rubric. 
+Your team will complete a deliverable during each class session. Typically these deliverables involve writing up the results of an analysis project we completed in class. I provide these deliverables at the start of each class session, along with a grading rubric. 
 
 <br>
 
@@ -300,6 +308,7 @@ F      Failing            <60
 <br>
 
 ***
+
 ### Course Logistics
 
 | About the... | Details... |
@@ -316,6 +325,7 @@ F      Failing            <60
 <br>
 
 ***
+
 ### UMKC Support Services
 
 | Topic... | Services... |
@@ -328,6 +338,7 @@ F      Failing            <60
 <br>
 
 ***
+
 ### Classroom Policies
 
 | Topic... | Policy... |
@@ -349,7 +360,7 @@ F      Failing            <60
 
 ***
 <center>
-*Three statisticians go hunting.  The first one shoots, and misses far right.  The second one shoots, and misses far left.  The third one says, "we got it!"*
+*Three statisticians go hunting. The first one shoots, and misses far right. The second one shoots, and misses far left. The third one says, "we got it!"*
 </center>
 
 ***
