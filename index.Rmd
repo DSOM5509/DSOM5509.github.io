@@ -225,6 +225,12 @@ Each course session touches on the entire data science workflow shown in the gra
 
 * [Constructing visualizations with ggplot2](https://youtu.be/ty9F2F3AnnU)
 
+*Deck & Notes*
+
+* [Live coding exercise](Session5LiveCoding.pdf)
+* [Slide deck](Session5.html)
+* [Filtering and sampling example](FilteringIllustration.html)
+
 <br>
 
 #### Session 6: 23 March 2019
