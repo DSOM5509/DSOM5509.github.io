@@ -249,6 +249,10 @@ Each course session touches on the entire data science workflow shown in the gra
 
 * [The basics of working with multilevel data](https://youtu.be/Lxuig_L1TT4)
 
+*Deck*
+
+* [Slide deck](Session6.html)
+
 <br>
 
 ***
