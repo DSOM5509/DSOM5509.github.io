@@ -127,11 +127,6 @@ Each course session touches on the entire data science workflow shown in the gra
 * [Course introduction](https://youtu.be/LYGdEfQNKNw)
 * [Working in R Studio Cloud](https://youtu.be/lFximWuEaPw)
 
-*Deck & Notes*
-
-* [Live coding exercise](Session1LiveCoding.pdf)
-* [Slide deck](Session1.html)
-
 <br>
 
 #### Session 2: 26 Jan 2019
@@ -149,17 +144,6 @@ Each course session touches on the entire data science workflow shown in the gra
 
 * [Different ways of measuring the same thing](https://youtu.be/h4aVcxJgOqo)
 
-*Deck & Notes*
-
-* [Live coding exercise](Session2LiveCoding.pdf)
-* [Slide deck](Session2.html)
-
-*Deliverable Feedback*
-
-* [Session 2 Team Deliverable (final .pdf)](Session2TeamDeliverable.pdf)
-* [Session 2 Team Deliverable (Markdown)](Session2TeamDeliverable.Rmd)
-    * [Session 2 Deliverable Feedback](https://youtu.be/NLMt_J2k1_k)
-
 <br>
 
 #### Session 3: 8 Feb 2019
@@ -176,18 +160,6 @@ Each course session touches on the entire data science workflow shown in the gra
 
 * [Data wrangling with the tidyverse](https://youtu.be/7mU7khywBGM)
 
-*Notes*
-
-* [Live coding exercise--Visualizing regression](Session3LiveCoding_Simulation.pdf)
-* [Live coding exercise--Bayesian linear models](Session3LiveCoding_Bayesian.pdf)
-* [Live coding exercise--Data wrangling](Session3LiveCoding_Wrangling.html)
-    * [Live Coding Helper Video](https://youtu.be/IxXYJ4x7KN4)
-
-*Deliverable Feedback*
-
-* [Session 3 Team Deliverable (final .pdf)](Session3TeamDeliverableSolution.pdf)
-* [Session 3 Team Deliverable (Markdown)](Session3TeamDeliverableSolution.Rmd)
-
 <br>
 
 #### Session 4: 23 Feb 2019
@@ -203,10 +175,6 @@ Each course session touches on the entire data science workflow shown in the gra
 *Videos*
 
 * [Evaluating regression models](https://youtu.be/UfgbdtAEwNI)
-
-*Deck*
-
-* [Slide deck](Session4.html)
 
 <br>
 
@@ -225,12 +193,6 @@ Each course session touches on the entire data science workflow shown in the gra
 
 * [Constructing visualizations with ggplot2](https://youtu.be/ty9F2F3AnnU)
 
-*Deck & Notes*
-
-* [Live coding exercise](Session5LiveCoding.pdf)
-* [Slide deck](Session5.html)
-* [Filtering and sampling example](FilteringIllustration.html)
-
 <br>
 
 #### Session 6: 23 March 2019
@@ -248,10 +210,6 @@ Each course session touches on the entire data science workflow shown in the gra
 *Videos*
 
 * [The basics of working with multilevel data](https://youtu.be/Lxuig_L1TT4)
-
-*Deck*
-
-* [Slide deck](Session6.html)
 
 <br>
 
